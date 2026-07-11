@@ -1,6 +1,6 @@
 # Templar Kernel GKI 5.10 — garnet
 
-Custom GKI 5.10 kernel for **Redmi Note 13 Pro 5G (garnet)** on HyperOS/MIUI Android 14.
+Custom GKI 5.10 kernel for **Redmi Note 13 Pro 5G (garnet)** on HyperOS/MIUI Android 16.
 Fork of [Steambot12/Templar-Kernel-GKI-5.10](https://github.com/Steambot12/Templar-Kernel-GKI-5.10) (android12-5.10, KMI generation 9).
 
 ---
@@ -73,7 +73,7 @@ fastboot reboot
 
 ## AnyKernel3
 
-The build script clones [AnyKernel3](https://github.com/osm0sis/AnyKernel3) by osm0sis automatically to `/tmp/anykernel3`. It uses `dump_boot` + `write_boot` with auto slot detection.
+The build script clones [AnyKernel3](https://github.com/osm0sis/AnyKernel3) automatically to `/tmp/anykernel3`. It uses `dump_boot` + `write_boot` with auto slot detection.
 
 If you already have it at `~/anykernel3`, change the path in the script.
 
@@ -82,7 +82,7 @@ If you already have it at `~/anykernel3`, change the path in the script.
 ## Notes
 
 - GKI 2.0 compatible (KMI generation 9, android12-5.10)
-- Tested on HyperOS Android 14/16 (garnet)
+- Tested on HyperOS Android 16 (garnet)
 - Unlocked bootloader required
 - Works with Magisk + KPatch-Next-Module (KPM)
 - With 16GB RAM or less, ThinLTO is required to avoid OOM during linking

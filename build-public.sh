@@ -13,6 +13,10 @@ export CROSS_COMPILE=aarch64-linux-gnu-
 export CC=clang
 export LLVM=1
 export LLVM_IAS=1
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 mkdir -p "$OUTPUT_DIR"
 cd "$ROOT_DIR"
