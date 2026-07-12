@@ -1,4 +1,5 @@
-# Templar Kernel GKI 5.10 — garnet
+# hyperperf+
+Kernel GKI 5.10 — garnet
 
 Custom GKI 5.10 kernel for **Redmi Note 13 Pro 5G (garnet)** on HyperOS/MIUI Android 16.
 Fork of [Steambot12/Templar-Kernel-GKI-5.10](https://github.com/Steambot12/Templar-Kernel-GKI-5.10) (android12-5.10, KMI generation 9).
