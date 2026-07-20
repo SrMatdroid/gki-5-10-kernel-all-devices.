@@ -18,6 +18,7 @@ Fork of [Steambot12/Templar-Kernel-GKI-5.10](https://github.com/Steambot12/Templ
 - **F2FS compression**
 - **EROFS per-CPU kthreads** (with high priority)
 - **PM_WAKELOCKS_LIMIT=0** — no wakelock limit
+- **Fast Charger module** — kernel-level override for battery charge current (CONSTANT_CHARGE_CURRENT + CHARGE_CONTROL_LIMIT). Works on GKI but depends heavily on the vendor PMIC implementation; may not work the same on all devices.
 
 ---
 
@@ -46,13 +47,17 @@ cd templar-kernel-garnet
 
 # For any GKI 5.10 device (public, no device check)
 ./build-public.sh
+
+# SUSFS + KernelSU build (includes fast charger)
+./build-susfs.sh
 ```
 
-The garnet build uses the full optimization fragment including Vorpal governor and device-specific tweaks. The public build only enables safe options (ThinLTO, BBR, Kyber, CAKE, ZPOOL, F2FS compression, EROFS kthreads).
+The garnet build uses the full optimization fragment including Vorpal governor and device-specific tweaks. The public build only enables safe options (ThinLTO, BBR, Kyber, CAKE, ZPOOL, F2FS compression, EROFS kthreads). The SUSFS build adds KernelSU root + SUSFS hiding + fast charger module.
 
 Output:
 - `~/kernel-output/TemplarKernel-GKI5.10-garnet.zip`
 - `~/kernel-output-public/TemplarKernel-GKI5.10-Public.zip`
+- `~/kernel-output-susfs/Kernel-GKI5.10-SUSFS.zip` (SUSFS build)
 - Uncompressed `Image` is also copied
 
 ---
@@ -87,6 +92,7 @@ If you already have it at `~/anykernel3`, change the path in the script.
 - Unlocked bootloader required
 - Works with Magisk + KPatch-Next-Module (KPM)
 - With 16GB RAM or less, ThinLTO is required to avoid OOM during linking
+- Fast charger module adds `enabled`, `fcc`, and `temp_limit` sysfs under `/sys/class/power_supply/battery/`. Enable with `echo 1 > enabled` and set FCC with `echo 8000000 > fcc`. Works on garnet, YMMV on other devices.
 
 ---
 
