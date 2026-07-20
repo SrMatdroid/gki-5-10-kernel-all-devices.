@@ -98,10 +98,11 @@ If you already have it at `~/anykernel3`, change the path in the script.
 
 ## Credits
 
-- **[Steambot12](https://github.com/Steambot12)** — Templar Kernel base, Vorpal CPUFreq Governor v2.0
-- **Google / AOSP** — android12-5.10 GKI common kernel
+- **[Steambot12](https://github.com/Steambot12)** — Templar Kernel base, Vorpal CPUFreq Governor v2.0 & android12-5.10 GKI kernel base
+- **Google / AOSP
 - **[osm0sis](https://github.com/osm0sis)** — AnyKernel3
-- **@kantsel1** — KPatch-Next for KPM module support
+-  **[Star-Seven](https://github.com/Star-Seven/susfs4ksu)** -susfs
+-  **[tiann](https://github.com/tiann/kernelSU)** -kernelsu
 
 ```
 SrMatdroid — 2026
